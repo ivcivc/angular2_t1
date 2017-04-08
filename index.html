@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Angular2Firebase</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body class="dx-viewport">
+  <app-root>Loading...</app-root>
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+
+
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDdkr21MylLHIyV4Y0D55HZeGKwZWkHU-A",
+    authDomain: "angular-teste1.firebaseapp.com",
+    databaseURL: "https://angular-teste1.firebaseio.com",
+    storageBucket: "angular-teste1.appspot.com",
+    messagingSenderId: "988060428254"
+  };
+  firebase.initializeApp(config);
+
+  var db =firebase.database().ref();
+  xx=db;
+  db.on('value',function( s) {
+       console.log( s.val() ) 
+  });
+  
+</script>
+
+</html>
